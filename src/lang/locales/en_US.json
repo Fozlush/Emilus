@@ -124,5 +124,13 @@
 
 	"sidenav.docs": "Docs",
 	"sidenav.docs.documentation": "Documentation",
-	"sidenav.docs.changelog": "Changelog"
+	"sidenav.docs.changelog": "Changelog",
+
+	"sidenav.main": "Main",
+	"sidenav.main.customers": "Customers",
+	"sidenav.main.customers.customers-list": "Customers list",
+	"sidenav.main.customers.customers-groups": "Customers groups",
+
+	"sidenav.systems": "Systems",
+	"sidenav.systems.settings": "Settings"
 }
