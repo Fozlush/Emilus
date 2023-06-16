@@ -35,6 +35,10 @@ export class CustomersList extends Component {
     });
 	}
 
+	openCustomerCard = (record) => {
+		this.props.history.push(`/app/customers/customer-card/${record.id}`)
+	}
+
 	componentDidMount() {
 		fetch('https://jsonplaceholder.typicode.com/users')
 		.then(response => response.json())
@@ -53,7 +57,7 @@ export class CustomersList extends Component {
 				dataIndex: 'name',
 				render: (_, record) => (
 					<div className="d-flex">
-						<AvatarStatus src={record.img} name={record.name} subTitle={record.email}/>
+						<AvatarStatus src={record.img} name={record.name} subTitle={record.email} onNameClick={() => {this.openCustomerCard(record)}}/>
 					</div>
 				),
 				sorter: {
@@ -65,28 +69,13 @@ export class CustomersList extends Component {
 				},
 			},
 			{
-				title: 'Role',
-				dataIndex: 'role',
-				sorter: {
-					compare: (a, b) => a.role.length - b.role.length,
-				},
-			},
-			{
-				title: 'Last online',
-				dataIndex: 'lastOnline',
-				render: date => (
-					<span>{moment.unix(date).format("MM/DD/YYYY")} </span>
-				),
-				sorter: (a, b) => moment(a.lastOnline).unix() - moment(b.lastOnline).unix()
-			},
-			{
-				title: 'Status',
-				dataIndex: 'status',
-				render: status => (
-					<Tag className ="text-capitalize" color={status === 'active'? 'cyan' : 'red'}>{status}</Tag>
+				title: 'Website',
+				dataIndex: 'website',
+				render: website => (
+					<span className ="text-capitalize">{website}</span>
 				),
 				sorter: {
-					compare: (a, b) => a.status.length - b.status.length,
+					compare: (a, b) => a.website.length - b.website.length,
 				},
 			},
 			{
