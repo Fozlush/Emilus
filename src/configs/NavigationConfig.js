@@ -43,6 +43,14 @@ const mainNavTree = [{
         },
       ]
     },
+    {
+      key: 'scheduler',
+      path: `${APP_PREFIX_PATH}/scheduler`,
+      title: 'sidenav.main.scheduler',
+      icon: '',
+      breadcrumb: false,
+      submenu: []
+    }
   ]
 }]
 

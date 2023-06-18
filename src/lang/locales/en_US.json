@@ -131,6 +131,8 @@
 	"sidenav.main.customers.customers-list": "Customers list",
 	"sidenav.main.customers.customers-groups": "Customers groups",
 
+	"sidenav.main.scheduler": "Scheduler",
+
 	"sidenav.systems": "Systems",
 	"sidenav.systems.settings": "Settings"
 }
